@@ -20,7 +20,7 @@ Github Action for Running Code in cypress dockerhub images
 ```yml
 uses: comdotlinux/run-in-cypress-action@v1
 with:
-  - port-to-run-on: '3000'
-  - source-directory: 'src'
-  - port-to-run-on: 'chrome'
+  port-to-run-on: '3000'
+  source-directory: 'src'
+  browser-to-use: 'chrome'
 ```

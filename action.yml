@@ -14,9 +14,6 @@ inputs:
     description: 'The Browser to use, currently only electron and chrome are available.'
     required: true
     default: 'chrome'
-outputs:
-  time: # id of output
-    description: 'The time we greeted you'
 runs:
   using: 'docker'
   image: 'Dockerfile'

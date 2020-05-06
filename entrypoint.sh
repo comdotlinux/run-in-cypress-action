@@ -1,4 +1,4 @@
-#!/bin/sh -l
+#!/bin/bash -l
 
 if [[ $# -ne 3 ]] ; then
 	echo "needs 3 arguments, port srcFolder browser"
@@ -6,7 +6,7 @@ if [[ $# -ne 3 ]] ; then
 fi
 
 export PORT=$1
-export SOURCE_DIR=$2
+export SOURCE_DIR=/github/workspace/$2
 export BROWSER=$3
 
 npm install -g browser-sync wait-on

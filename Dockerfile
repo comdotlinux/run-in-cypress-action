@@ -1,5 +1,4 @@
 FROM cypress/included:4.5.0
-WORKDIR /app
 ENV TZ=Europe/Berlin
 # ENV PORT=3000
 # ENV BROWSER=chrome
