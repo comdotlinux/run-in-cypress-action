@@ -1,0 +1,26 @@
+# action.yml
+name: 'Run In Cypress'
+description: 'Run your UI Tests in cypress with included chrome browser'
+inputs:
+  port-to-run-on:
+    description: 'The Port where the internal server runs on.'
+    required: true
+    default: '3000'
+  source-directory:
+    description: 'The Directory where the source files are kept.'
+    required: true
+    default: 'src'
+  browser-to-use:
+    description: 'The Browser to use, currently only electron and chrome are available.'
+    required: true
+    default: 'chrome'
+outputs:
+  time: # id of output
+    description: 'The time we greeted you'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.port-to-run-on }}
+    - ${{ inputs.source-directory }}
+    - ${{ inputs.browser-to-use }}
